@@ -1,11 +1,11 @@
-import React from "react";
 import {
   Card,
   CardMedia,
   CardContent,
   Typography,
+  Button,
 } from "@mui/material";
-const Cards = ({ monster }) => {
+const Cards = ({ monster, deleteCard }) => {
   const { name, email, id } = monster;
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -20,6 +20,7 @@ const Cards = ({ monster }) => {
         <Typography variant="body2" color="text.secondary">
           {email}
         </Typography>
+      <Button sx={{ my: 1 }} variant="contained" color="error" onClick={() => deleteCard(id-1)}>DEl</Button>
       </CardContent>
     </Card>
   );
