@@ -3,7 +3,22 @@ import { Grid, Stack, CircularProgress } from "@mui/material";
 import Cards from "./Cards";
 
 const CardContainer = ({ filteredRolo, setFilteredRolo }) => {
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 800);
+  }, []);
+
+  if (loading) {
+    return (
+      <Stack sx={{ color: 'grey.500' }} spacing={2} direction="row" alignItems="center">
+        <CircularProgress />
+      </Stack>
+    );
+  }
 
   const deleteCard = (id) => {
     console.log(id);

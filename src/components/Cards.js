@@ -5,6 +5,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
+import { DeleteOutline } from "@mui/icons-material";
 const Cards = ({ monster, deleteCard }) => {
   const { name, email, id } = monster;
   return (
@@ -20,7 +21,7 @@ const Cards = ({ monster, deleteCard }) => {
         <Typography variant="body2" color="text.secondary">
           {email}
         </Typography>
-      <Button sx={{ my: 1 }} variant="contained" color="error" onClick={() => deleteCard(id-1)}>DEl</Button>
+      <Button sx={{ my: 1 }} variant="contained" startIcon={<DeleteOutline />} color="error" onClick={() => deleteCard(id)}>DEl</Button>
       </CardContent>
     </Card>
   );

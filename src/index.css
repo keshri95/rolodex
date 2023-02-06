@@ -3,3 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.light-mode{
+    background: white !important;
+    color: black !important;
+}
+
+.dark-mode{
+    background: rgb(36, 35, 35) !important;
+    color: white !important;
+}
