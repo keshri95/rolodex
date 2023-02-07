@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Paper } from "@mui/material";
 
-const Search = ({monsters, onChangeHandler }) => {
+const Search = ({ onChangeHandler }) => {
   
 
   return (
