@@ -1,6 +1,6 @@
 import { Box, Stack } from "@mui/system";
 import React, { useEffect, useState } from "react";
-const Filter = React.lazy(() => import("./Filter"));
+// const Filter = React.lazy(() => import("./Filter"));
 const CardContainer = React.lazy(() => import("./CardContainer"));
 const Search = React.lazy(() => import("./Search"));
 const Home = ({ monsters }) => {

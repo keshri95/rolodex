@@ -11,7 +11,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { Suspense, useEffect, useState } from "react";
 import React, { lazy } from "react";
-const Home = React.lazy(() => import("./components/Home"));
+const Home = lazy(() => import("./components/Home"));
 
 const darkTheme = createTheme({
   palette: {

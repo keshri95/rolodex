@@ -22,7 +22,7 @@ const CardContainer = ({ filteredRolo, setFilteredRolo }) => {
 
   const deleteCard = (id) => {
     console.log(id);
-    const updatedAry = filteredRolo.filter((elem, ind) => {
+    const updatedAry = filteredRolo.filter((_, ind) => {
       return ind !== id;
     });
 
@@ -39,7 +39,11 @@ const CardContainer = ({ filteredRolo, setFilteredRolo }) => {
       >
         {filteredRolo.map((monster, id) => {
           return (
-            <Grid item xs={12} sm={4} key={id}>
+         
+            <Grid
+              key={id}
+              span={{ xs: 12, sm: 4, md: 4 }} 
+            >
               <Cards monster={monster} deleteCard={deleteCard} />
             </Grid>
           );
